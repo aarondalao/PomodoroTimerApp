@@ -56,7 +56,8 @@ namespace PomodoroTimerApp
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(756, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(567, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -68,56 +69,55 @@ namespace PomodoroTimerApp
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reportToolStripMenuItem.Text = "Report";
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // timeOutputLabel
             // 
             this.timeOutputLabel.AutoSize = true;
             this.timeOutputLabel.Font = new System.Drawing.Font("Microsoft Yi Baiti", 99F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeOutputLabel.Location = new System.Drawing.Point(143, 153);
-            this.timeOutputLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.timeOutputLabel.Location = new System.Drawing.Point(107, 124);
             this.timeOutputLabel.Name = "timeOutputLabel";
-            this.timeOutputLabel.Size = new System.Drawing.Size(143, 165);
+            this.timeOutputLabel.Size = new System.Drawing.Size(113, 132);
             this.timeOutputLabel.TabIndex = 1;
             this.timeOutputLabel.Text = " ";
             // 
             // pomodoroButton
             // 
             this.pomodoroButton.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pomodoroButton.Location = new System.Drawing.Point(11, 83);
-            this.pomodoroButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pomodoroButton.Location = new System.Drawing.Point(8, 67);
             this.pomodoroButton.Name = "pomodoroButton";
-            this.pomodoroButton.Size = new System.Drawing.Size(234, 48);
+            this.pomodoroButton.Size = new System.Drawing.Size(176, 39);
             this.pomodoroButton.TabIndex = 2;
             this.pomodoroButton.Text = "Pomodoro";
             this.pomodoroButton.UseVisualStyleBackColor = true;
@@ -126,10 +126,9 @@ namespace PomodoroTimerApp
             // shortBreakButton
             // 
             this.shortBreakButton.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shortBreakButton.Location = new System.Drawing.Point(253, 83);
-            this.shortBreakButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.shortBreakButton.Location = new System.Drawing.Point(190, 67);
             this.shortBreakButton.Name = "shortBreakButton";
-            this.shortBreakButton.Size = new System.Drawing.Size(244, 48);
+            this.shortBreakButton.Size = new System.Drawing.Size(183, 39);
             this.shortBreakButton.TabIndex = 3;
             this.shortBreakButton.Text = "Short Break";
             this.shortBreakButton.UseVisualStyleBackColor = true;
@@ -138,10 +137,9 @@ namespace PomodoroTimerApp
             // longBreakButton
             // 
             this.longBreakButton.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.longBreakButton.Location = new System.Drawing.Point(505, 83);
-            this.longBreakButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.longBreakButton.Location = new System.Drawing.Point(379, 67);
             this.longBreakButton.Name = "longBreakButton";
-            this.longBreakButton.Size = new System.Drawing.Size(234, 48);
+            this.longBreakButton.Size = new System.Drawing.Size(176, 39);
             this.longBreakButton.TabIndex = 4;
             this.longBreakButton.Text = "Long Break";
             this.longBreakButton.UseVisualStyleBackColor = true;
@@ -150,10 +148,9 @@ namespace PomodoroTimerApp
             // startStopButton
             // 
             this.startStopButton.Font = new System.Drawing.Font("Microsoft Yi Baiti", 45F);
-            this.startStopButton.Location = new System.Drawing.Point(11, 341);
-            this.startStopButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.startStopButton.Location = new System.Drawing.Point(8, 277);
             this.startStopButton.Name = "startStopButton";
-            this.startStopButton.Size = new System.Drawing.Size(728, 169);
+            this.startStopButton.Size = new System.Drawing.Size(546, 137);
             this.startStopButton.TabIndex = 5;
             this.startStopButton.Text = "Start";
             this.startStopButton.UseVisualStyleBackColor = true;
@@ -176,9 +173,9 @@ namespace PomodoroTimerApp
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 525);
+            this.ClientSize = new System.Drawing.Size(567, 427);
             this.Controls.Add(this.startStopButton);
             this.Controls.Add(this.longBreakButton);
             this.Controls.Add(this.shortBreakButton);
@@ -186,7 +183,6 @@ namespace PomodoroTimerApp
             this.Controls.Add(this.timeOutputLabel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Pomodoro Timer";
             this.Load += new System.EventHandler(this.Form1_Load);

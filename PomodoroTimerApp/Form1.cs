@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +23,16 @@ namespace PomodoroTimerApp
             InitializeComponent();
 
      
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            PButtonClicked = true;
+            timeOutputLabel.Text = "24:00";
+            this.BackColor = Color.FromArgb(219, 82, 77);
+
+            ss = 10;
+            mm = 0;
         }
 
         // timer_ticks methods
@@ -52,9 +63,12 @@ namespace PomodoroTimerApp
                     timeOutputLabel.ForeColor = System.Drawing.Color.Green;
                     timeOutputLabel.Text = "break time!";
 
+
                     PTimer.Stop();
                     PTimer.Dispose();
                     PTimer.Enabled = false;
+
+                    BreakTime();
 
                     //startStopButton
                 }
@@ -127,9 +141,18 @@ namespace PomodoroTimerApp
             }
         }
 
+        private void BreakTime() {
+            // change the block code with try catch for the file path of the sounds.
+
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Alarm04.wav");
+            simpleSound.Play();
+            
+
+        }
+
 
         //
-        //  start/stop button clicks
+        //  timer type buttons
         //
 
 
@@ -140,8 +163,8 @@ namespace PomodoroTimerApp
             this.BackColor = Color.FromArgb(219, 82, 77);
 
             PButtonClicked = true;
-            ss = 60;
-            mm = 1;
+            ss = 10;
+            mm = 0;
         }
 
         private void shortBreakButton_Click(object sender, EventArgs e)
@@ -156,6 +179,15 @@ namespace PomodoroTimerApp
            
 
         }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 settingsForm = new Form2();
+            settingsForm.Show();
+        }
+
+        
+
         private void longBreakButton_Click(object sender, EventArgs e)
         {
             timeOutputLabel.Text = "15:00";
@@ -252,15 +284,7 @@ namespace PomodoroTimerApp
 
         // on form load
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            PButtonClicked = true;
-            timeOutputLabel.Text = "24:00";
-            this.BackColor = Color.FromArgb(219, 82, 77);
-
-            ss = 60;
-            mm = 1;
-        }
+        
 
 
         private void CreatePomodoroTimer() {
